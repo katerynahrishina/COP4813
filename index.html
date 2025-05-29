@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kateryna Hrishina - Time of Day</title>
+  <style>
+    body {
+      color: black;
+      text-align: center;
+      padding-top: 20%;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <script>
+    function setBackgroundColor() {
+      //const hour = new Date().getHours();
+      const hour = 0;
+      let bgColor = "";
+      if (hour >= 6 && hour < 12) {
+        bgColor = "#FFFAE3"; // Morning - light yellow
+      } else if (hour >= 12 && hour < 18) {
+        bgColor = "#FFD580"; // Afternoon - warm orange
+      } else if (hour >= 18 && hour < 21) {
+        bgColor = "#FFB6C1"; // Evening - pinkish
+      } else {
+        bgColor = "#2C3E50"; // Night - dark blue
+      }
+      document.body.style.backgroundColor = bgColor;
+    }
+  </script>
+</head>
+<body onload="setBackgroundColor()">
+<h1>Welcome to Kat's Assignment 2: Dynamic Webpage</h1>
+<p><strong>Name:</strong> Kateryna Hrishina</p>
+<p><strong>Course:</strong> COP 4813 - Web Applications Programming</p>
+<p><strong>Major:</strong> Computer Science</p>
+</body>
+</html>

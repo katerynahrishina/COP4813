@@ -1,0 +1,8 @@
+Overview of system functionality:
+This is a dynamic webpage create for COP 4813. It's background color changes based on the time of day, and it contains basic information in the center.
+
+Known Issues:
+None.
+
+Assumptions:
+HTML and JavaScript was used, and the page is dynamic.

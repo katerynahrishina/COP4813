@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kateryna Hrishina - Time-Based Image</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      margin-top: 10%;
+    }
+  </style>
+  <script>
+    function setImageByTime() {
+      const hour = new Date().getHours();
+      const image = document.getElementById("timeImage");
+      const message = document.getElementById("message");
+
+      if (hour >= 6 && hour < 12) {
+        image.src = "https://www.shutterstock.com/image-photo/stunning-sunrise-paints-sky-soft-260nw-2534473587.jpg"; // Morning
+        image.alt = "Morning Scene";
+        message.innerText = "Sunrise";
+      } else if (hour >= 12 && hour < 18) {
+        image.src = "https://www.shutterstock.com/image-photo/lush-rice-paddy-field-neat-260nw-2499404003.jpg"; // Afternoon
+        image.alt = "Afternoon Scene";
+        message.innerText = "Afternoon";
+      } else {
+        image.src = "https://www.shutterstock.com/image-photo/this-photo-illustration-deep-blue-260nw-1706690023.jpg"; // Evening/Night
+        image.alt = "Evening/Night Scene";
+        message.innerText = "Night";
+      }
+    }
+  </script>
+</head>
+<body onload="setImageByTime()">
+<div class="container">
+  <h1>Welcome to Kat's Assignment 3: Time-Based Image</h1>
+  <p><strong>Name:</strong> Kateryna Hrishina</p>
+  <p><strong>Course:</strong> COP 4813 - Web Applications Programming</p>
+  <p><strong>Major:</strong> Computer Science</p>
+  <p><strong id="message"></strong></p>
+  <img id="timeImage" src="" alt="Time-based image">
+</div>
+</body>
+</html>
